@@ -64,5 +64,5 @@ This project consists of a web application with a **frontend** and **backend** d
        docker build -t localhost:5000/final-project-backend .
 
 
-  Check Folder Images contain Screenshots :) 
+  Check Folder Images for Screenshots :) 
 

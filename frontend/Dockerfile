@@ -1,20 +1,12 @@
-# Dockerfile pour le frontend
+# Use Python image
 FROM python:3.9-slim
 
-# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier les fichiers de dépendances
-COPY requirements.txt .
-
-# Installer les dépendances
-RUN pip install -r requirements.txt
-
-# Copier le code de l'application
 COPY . .
 
-# Exposer le port du frontend
-EXPOSE 3403
+RUN pip install -r requirements.txt
 
-# Démarrer l'application
+EXPOSE 8777
+
 CMD ["python", "app.py"]

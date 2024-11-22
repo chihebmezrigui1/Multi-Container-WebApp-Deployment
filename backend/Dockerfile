@@ -1,9 +1,12 @@
-FROM python:3.8-slim
+# Use Python image
+FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
 RUN pip install -r requirements.txt
+
+EXPOSE 3402
 
 CMD ["python", "app.py"]

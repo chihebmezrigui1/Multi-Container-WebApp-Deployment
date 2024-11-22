@@ -1,0 +1,96 @@
+# version: '3'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#     ports:
+#       - "3402:3402"
+#     volumes:
+#       - ./app-data:/data  # Volume persistant pour les données
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#     ports:
+#       - "8777:3403"
+#     depends_on:
+#       - backend
+#     networks:
+#       - app-network
+
+# networks:
+#   app-network:
+#     driver: bridge
+
+
+
+
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend  # Répertoire contenant le Dockerfile pour le backend
+    ports:
+      - "3402:3402"  # Mappe le port 3402 du conteneur sur le port 3402 de la machine hôte
+    volumes:
+      - ${PWD}/app-data:/data  # Persiste les données du backend dans le répertoire 'app-data' de l'hôte
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend  # Répertoire contenant le Dockerfile pour le frontend
+    ports:
+      - "8777:3403"  # Mappe le port 3403 du conteneur sur le port 8777 de la machine hôte
+    depends_on:
+      - backend  # Le frontend dépend du backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge  # Utilisation du réseau 'bridge' pour la communication entre les conteneurs
+
+
+
+# version: '3.8'
+
+# services:
+#   backend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.backend
+#     image: localhost:5000/final-project-backend
+#     ports:
+#       - "3402:3402"
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.frontend
+#     image: localhost:5000/final-project-frontend
+#     ports:
+#       - "8777:8777"
+#     networks:
+#       - app-network
+
+#   registry:
+#     image: registry:2
+#     container_name: registry
+#     ports:
+#       - "5000:5000"
+#     volumes:
+#       - registry-data:/var/lib/registry
+
+# networks:
+#   app-network:
+#     driver: bridge
+
+# volumes:
+#   registry-data:

@@ -28,12 +28,18 @@ This project consists of a web application with a **frontend** and **backend** d
 ### Prerequisites
 
 - **Docker**: Ensure Docker is installed and running on your machine.
+  Check your containers :
+    ```bash
+        docker ps
+    
 - **Minikube**: Used to set up a local Kubernetes cluster.
     ```bash
         minikube stop
         minikube start
 
 - **Docker Compose**: Used for managing multi-container Docker applications.
+    ```bash
+        docker-compose up --build
 - **Kubernetes Cluster**: Can be set up with Minikube or any other Kubernetes provider.
 - **kubectl**: The Kubernetes command-line tool for managing clusters.
       ```bash

@@ -33,6 +33,7 @@ This project consists of a web application with a **frontend** and **backend** d
         docker ps
     
 - **Minikube**: Used to set up a local Kubernetes cluster.
+  
     ```bash
         minikube stop
         minikube start
@@ -42,8 +43,8 @@ This project consists of a web application with a **frontend** and **backend** d
         docker-compose up --build
 - **Kubernetes Cluster**: Can be set up with Minikube or any other Kubernetes provider.
 - **kubectl**: The Kubernetes command-line tool for managing clusters.
-      ```bash
- 
+
+    ```bash
           kubectl apply -f backend-deployment.yaml
           kubectl apply -f frontend-deployment.yaml
           kubectl apply -f backend-service.yaml

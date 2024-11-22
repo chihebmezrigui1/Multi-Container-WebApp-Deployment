@@ -36,7 +36,8 @@ This project consists of a web application with a **frontend** and **backend** d
 - **Docker Compose**: Used for managing multi-container Docker applications.
 - **Kubernetes Cluster**: Can be set up with Minikube or any other Kubernetes provider.
 - **kubectl**: The Kubernetes command-line tool for managing clusters.
-      ```bash 
+      ```bash
+ 
           kubectl apply -f backend-deployment.yaml
           kubectl apply -f frontend-deployment.yaml
           kubectl apply -f backend-service.yaml

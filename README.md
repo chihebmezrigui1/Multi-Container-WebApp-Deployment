@@ -5,29 +5,15 @@
 This project consists of a web application with a **frontend** and **backend** deployed using **Docker** and **Kubernetes**. The application allows for interaction between the frontend and backend through RESTful APIs. The backend handles requests related to data processing and storage, while the frontend provides the user interface.
 
 / **Project Structure**
--- //app-data 
-     log.txt
--- //backend
-     app.py
-     Dockerfile
-     requirements.txt
--- //frontend
-     //templates
-       displayData.html
-       index.html
-     app.py
-     Dockerfile
-     requirements.txt
--- //kubernetes
-    backend-deployment.yaml
-    backend-hpa.yaml
-    backend-pv.yaml
-    backend-pvc.yaml
-    backend-service.yaml
-    frontend-deployment.yaml
-    frontend-hpa.yaml
-    frontend-service.yaml
-docker-compose.yaml
+/app-data └── log.txt
+
+/backend └── app.py └── Dockerfile └── requirements.txt
+
+/frontend └── /templates └── displayData.html └── index.html └── app.py └── Dockerfile └── requirements.txt
+
+/kubernetes └── backend-deployment.yaml └── backend-hpa.yaml └── backend-pv.yaml └── backend-pvc.yaml └── backend-service.yaml └── frontend-deployment.yaml └── frontend-hpa.yaml └── frontend-service.yaml
+
+/docker-compose.yaml
 
 ### Components
 
@@ -51,14 +37,14 @@ docker-compose.yaml
 - **Kubernetes Cluster**: Can be set up with Minikube or any other Kubernetes provider.
 - **kubectl**: The Kubernetes command-line tool for managing clusters.
       ```bash 
-    kubectl apply -f backend-deployment.yaml
-    kubectl apply -f frontend-deployment.yaml
-    kubectl apply -f backend-service.yaml
-    kubectl apply -f frontend-service.yaml
-    kubectl apply -f backend-pv.yaml
-    kubectl apply -f backend-pvc.yaml
-    kubectl apply -f backend-hpa.yaml
-    kubectl apply -f frontend-hpa.yaml
+          kubectl apply -f backend-deployment.yaml
+          kubectl apply -f frontend-deployment.yaml
+          kubectl apply -f backend-service.yaml
+          kubectl apply -f frontend-service.yaml
+          kubectl apply -f backend-pv.yaml
+          kubectl apply -f backend-pvc.yaml
+          kubectl apply -f backend-hpa.yaml
+          kubectl apply -f frontend-hpa.yaml
 
 
 ### 1. Deployment with Docker Compose
@@ -67,8 +53,8 @@ docker-compose.yaml
 
 1. **Run the Docker Registry**:
    ```bash
-  docker run -d -p 5000:5000 --name registry registry   
-  docker build -t localhost:5000/final-project-backend .
+       docker run -d -p 5000:5000 --name registry registry   
+       docker build -t localhost:5000/final-project-backend .
 
 
   Check Folder Images contain Screenshots :) 

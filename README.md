@@ -79,7 +79,7 @@ Before deploying the application, ensure you have the following tools installed:
 
 #### Build and Push Docker Images
 
-**Step 1: Run the Docker Registry**
+**Run the Docker Registry**
 
 - Run the local Docker registry to host images:
   ```bash

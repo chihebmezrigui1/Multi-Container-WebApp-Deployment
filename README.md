@@ -15,7 +15,6 @@ This project consists of a web application with a **frontend** and **backend** d
 
 /docker-compose.yaml
 
-# Final Project: Multi-Container Web Application Deployment
 
 ## Components
 

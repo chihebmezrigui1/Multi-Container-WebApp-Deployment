@@ -53,6 +53,10 @@ This project consists of a web application with a **frontend** and **backend** d
           kubectl apply -f backend-hpa.yaml
           kubectl apply -f frontend-hpa.yaml
 
+- **Scaling observations**
+   ```bash
+       kubectl get hpa
+
 
 ### 1. Deployment with Docker Compose
 
@@ -62,6 +66,7 @@ This project consists of a web application with a **frontend** and **backend** d
    ```bash
        docker run -d -p 5000:5000 --name registry registry   
        docker build -t localhost:5000/final-project-backend .
+       docker push localhost:5000/final-project-backend
 
 
   Check Folder Images for Screenshots :) 
